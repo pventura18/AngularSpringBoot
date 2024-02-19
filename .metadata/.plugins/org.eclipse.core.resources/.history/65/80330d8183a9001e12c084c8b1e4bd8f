@@ -1,0 +1,23 @@
+package com.bolsadeideas.springboot.webflux.app.controllers;
+
+import org.springframework.stereotype.Controller;
+
+import com.bolsadeideas.springboot.webflux.app.models.dao.ProductoDao;
+
+import ch.qos.logback.core.model.Model;
+
+
+@Controller
+public class ProductoController {
+
+	private final ProductoDao dao;
+
+	public ProductoController(ProductoDao dao) {
+		this.dao = dao;
+	}
+	
+	public String listarString(Model model) {
+		return "listar";
+	}
+	
+}

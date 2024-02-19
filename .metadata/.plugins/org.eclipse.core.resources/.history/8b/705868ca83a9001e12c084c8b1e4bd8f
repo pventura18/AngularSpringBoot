@@ -1,0 +1,28 @@
+package com.bolsadeideas.springboot.webflux.app.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.bolsadeideas.springboot.webflux.app.models.dao.ProductoDao;
+import com.bolsadeideas.springboot.webflux.app.models.documents.Producto;
+
+import ch.qos.logback.core.model.Model;
+import reactor.core.publisher.Flux;
+
+
+@Controller
+public class ProductoController {
+
+	private final ProductoDao dao;
+
+	public ProductoController(ProductoDao dao) {
+		this.dao = dao;
+	}
+	
+	@GetMapping({"/listar", "/"})
+	public String listarString(Model model) {
+		Flux<Producto> productorsFlux = dao.findAll();
+		return "listar";
+	}
+	
+}

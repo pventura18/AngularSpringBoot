@@ -1,0 +1,6 @@
+spring.datasource.url=jdbc:mysqul://localhost/db_springboot_backend
+spring.datasource.username=root
+spring.datasource.password=123456
+spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+spring.jpa.database-platform=org.hibernate.dialect.MySQL5InnoDBDialect
+spring.jpa.hibernate.ddl-auto=create-drop

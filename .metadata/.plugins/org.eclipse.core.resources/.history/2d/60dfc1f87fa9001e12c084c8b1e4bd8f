@@ -1,0 +1,10 @@
+package com.bolsadeideas.springboot.webflux.app.models.documents;
+
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection="productos")
+public class Producto {
+
+	private String id;
+	
+}
